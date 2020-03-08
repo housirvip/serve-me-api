@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "addresses",
+  "info": {
+    "name": "address"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "createTime",
+      "updateTime"
+    ]
+  },
+  "attributes": {
+    "state": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "integer"
+    }
+  }
+}

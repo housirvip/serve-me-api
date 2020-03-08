@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "orders",
+  "info": {
+    "name": "order"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "createTime",
+      "updateTime"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Waiting",
+        "Pending",
+        "Biding",
+        "Accepting",
+        "Processing",
+        "Refunding",
+        "Completed",
+        "Closed",
+        "Finished"
+      ]
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "vendor": {
+      "model": "vendor"
+    },
+    "bids": {
+      "collection": "bid",
+      "via": "order"
+    },
+    "address": {
+      "model": "address"
+    }
+  }
+}

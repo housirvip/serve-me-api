@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "bids",
+  "info": {
+    "name": "bid"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "createTime",
+      "updateTime"
+    ]
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "vendor": {
+      "model": "vendor"
+    },
+    "order": {
+      "via": "bids",
+      "model": "order"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "vendors",
+  "info": {
+    "name": "vendor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "createTime",
+      "updateTime"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "json"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "photoUrl": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "user": {
+      "via": "vendor",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "address": {
+      "model": "address"
+    }
+  }
+}
