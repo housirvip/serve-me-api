@@ -2,10 +2,6 @@
 
 const admin = require('firebase-admin');
 
-admin.initializeApp({
-  credential: admin.credential.applicationDefault()
-});
-
 module.exports = {
   getUid: (ctx) => {
     return new Promise((resolve, reject) => {
