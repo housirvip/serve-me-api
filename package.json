@@ -26,8 +26,8 @@
     "strapi-utils": "3.0.0-beta.19.3"
   },
   "_moduleAliases": {
-    "@root"      : ".",
-    "@core"      : "./core"
+    "@root": ".",
+    "@core": "./core"
   },
   "author": {
     "name": "A Strapi developer"
