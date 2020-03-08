@@ -7,7 +7,10 @@
 
 module.exports = {
   upgrade: async ctx => {
-    const res = await strapi.services.vendor.upgrade(ctx.state.user, ctx.request.body);
+    const user = ctx.state.user;
+    const vendor = ctx.request.body;
+    
+    const res = await strapi.services.vendor.upgrade(user, vendor);
 
     ctx.send(res);
   },

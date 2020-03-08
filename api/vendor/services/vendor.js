@@ -12,8 +12,8 @@ module.exports = {
       ].services.role.upgrade(u, 'vendor');
 
     if (user) {
-      // user.vendor = vendor.id;
       v.user = user.id;
+
       u.vendor = await strapi.query('vendor').create(v);
     }
 

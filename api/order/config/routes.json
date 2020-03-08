@@ -58,8 +58,40 @@
     },
     {
       "method": "PUT",
+      "path": "/order/accept",
+      "handler": "order.accept",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
       "path": "/order/confirm",
       "handler": "order.confirm",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/pay",
+      "handler": "order.pay",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/finish",
+      "handler": "order.finish",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/complete",
+      "handler": "order.complete",
       "config": {
         "policies": []
       }
