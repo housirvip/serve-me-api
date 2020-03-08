@@ -30,6 +30,11 @@
     },
     "zipCode": {
       "type": "integer"
+    },
+    "user": {
+      "via": "addresses",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

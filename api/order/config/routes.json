@@ -29,7 +29,9 @@
       "path": "/orders",
       "handler": "order.create",
       "config": {
-        "policies": []
+        "policies": [
+          "order-fields"
+        ]
       }
     },
     {
@@ -37,7 +39,9 @@
       "path": "/orders/:id",
       "handler": "order.update",
       "config": {
-        "policies": []
+        "policies": [
+          "order-fields"
+        ]
       }
     },
     {
@@ -45,7 +49,9 @@
       "path": "/orders/:id",
       "handler": "order.delete",
       "config": {
-        "policies": []
+        "policies": [
+          "order-fields"
+        ]
       }
     },
     {

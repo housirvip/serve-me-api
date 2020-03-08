@@ -26,9 +26,6 @@
       "configurable": false,
       "required": true
     },
-    "phone": {
-      "type": "string"
-    },
     "provider": {
       "type": "string",
       "configurable": false
@@ -43,9 +40,6 @@
       "type": "string",
       "configurable": false,
       "private": true
-    },
-    "firebaseUid": {
-      "type": "string"
     },
     "confirmed": {
       "type": "boolean",
@@ -63,12 +57,28 @@
       "plugin": "users-permissions",
       "configurable": false
     },
+    "phone": {
+      "type": "string"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "photoUrl": {
+      "type": "string"
+    },
+    "firebaseUid": {
+      "type": "string"
+    },
+    "deviceToken": {
+      "type": "string"
+    },
     "vendor": {
       "model": "vendor",
       "via": "user"
     },
     "addresses": {
-      "collection": "address"
+      "collection": "address",
+      "via": "user"
     }
   }
 }

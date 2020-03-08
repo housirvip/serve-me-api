@@ -29,7 +29,9 @@
       "path": "/vendors",
       "handler": "vendor.create",
       "config": {
-        "policies": []
+        "policies": [
+          "vendor-fields"
+        ]
       }
     },
     {
@@ -37,7 +39,9 @@
       "path": "/vendors/:id",
       "handler": "vendor.update",
       "config": {
-        "policies": []
+        "policies": [
+          "vendor-fields"
+        ]
       }
     },
     {
@@ -45,7 +49,9 @@
       "path": "/vendors/:id",
       "handler": "vendor.delete",
       "config": {
-        "policies": []
+        "policies": [
+          "vendor-fields"
+        ]
       }
     },
     {

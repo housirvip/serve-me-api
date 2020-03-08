@@ -13,6 +13,7 @@
   "dependencies": {
     "firebase-admin": "^8.9.2",
     "knex": "<0.20.0",
+    "module-alias": "^2.2.2",
     "mysql": "latest",
     "strapi": "3.0.0-beta.19.3",
     "strapi-admin": "3.0.0-beta.19.3",
@@ -23,6 +24,10 @@
     "strapi-plugin-upload": "3.0.0-beta.19.3",
     "strapi-plugin-users-permissions": "3.0.0-beta.19.3",
     "strapi-utils": "3.0.0-beta.19.3"
+  },
+  "_moduleAliases": {
+    "@root"      : ".",
+    "@core"      : "./core"
   },
   "author": {
     "name": "A Strapi developer"

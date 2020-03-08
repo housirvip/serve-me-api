@@ -1,4 +1,6 @@
-const ResponseBuilder = require('../../api/core/reponse-builder');
+'use strict';
+
+const ResponseBuilder = require('@core/reponse-builder');
 
 module.exports = strapi => {
   return {

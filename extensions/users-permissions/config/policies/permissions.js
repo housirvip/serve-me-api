@@ -12,13 +12,11 @@ module.exports = async (ctx, next) => {
       firebaseUid = await strapi.plugins[
         'users-permissions'
         ].services.firebase.getUid(ctx);
-      // console.log(firebaseUid);
     } catch (e) {
       try {
         const token = await strapi.plugins[
           'users-permissions'
           ].services.jwt.getToken(ctx);
-        // console.log(token);
         id = token.id;
         isAdmin = token.isAdmin;
       } catch (e) {
@@ -122,7 +120,7 @@ module.exports = async (ctx, next) => {
       ](ctx, next);
   }
 
-  if (ctx.state.user.vendor) {
+  if (ctx.state.user && ctx.state.user.vendor) {
     ctx.state.user.vendor = await strapi
       .query('vendor')
       .findOne({id: ctx.state.user.vendor});
