@@ -22,16 +22,16 @@ The mysql address should be changed to your own.
 ```shell
 # please create a new database, name is up to you, for example: serve-me
 # and set your environment param
-export DB_URL=mysql://{ipaddress}:{port}/{database}?characterEncoding=utf8&autoReconnect=true&useSSL=false
+export DB_URL={ipaddress}
 export DB_USER={user}
 export DB_PASSWORD={password}
 export GOOGLE_APPLICATION_CREDENTIALS={path}
 
 # for example: 
-# DB_URL=mysql://localhost:3306/serve-me?characterEncoding=utf8&autoReconnect=true&useSSL=false
+# DB_URL=localhost
 # ipaddress is localhostm, port is 3306, database is serve-me
 # DB_USER=root
-# DB_PASSWORD=123456
+# DB_PASSWORD=housirvip
 # GOOGLE_APPLICATION_CREDENTIALS=/path/to/firebase-admin-sdk-credentials.json
 
 {user} is your sql username

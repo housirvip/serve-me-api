@@ -5,9 +5,8 @@
       "connector": "bookshelf",
       "settings": {
         "client": "mysql",
-        "database": "serve-me-api",
-        "host": "127.0.0.1",
-        "port": 3306,
+        "database": "serve-me-dev",
+        "host": "${process.env.DB_URL}",
         "username": "root",
         "password": "housirvip"
       },
