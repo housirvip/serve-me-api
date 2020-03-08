@@ -69,9 +69,6 @@
     "firebaseUid": {
       "type": "string"
     },
-    "deviceToken": {
-      "type": "string"
-    },
     "vendor": {
       "model": "vendor",
       "via": "user"

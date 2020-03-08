@@ -5,12 +5,4 @@
  * to customize this controller
  */
 
-module.exports = {
-  refresh: async ctx => {
-    const res = await strapi.plugins[
-      'users-permissions'
-      ].services.firebase.refreshToken(ctx.state.user.firebaseUid);
-
-    ctx.send(res);
-  },
-};
+module.exports = {};

@@ -5,12 +5,19 @@
  * to customize this controller
  */
 
+const UserRole = require('@core/user-role.js');
+
 module.exports = {
   upgrade: async ctx => {
-    const user = ctx.state.user;
     const vendor = ctx.request.body;
-    
-    const res = await strapi.services.vendor.upgrade(user, vendor);
+
+    const user = await strapi.plugins[
+      'users-permissions'
+      ].services.role.upgrade(ctx.state.user, UserRole.Vendor);
+
+    vendor.user = user.id;
+
+    const res = await strapi.query('vendor').create(vendor);
 
     ctx.send(res);
   },
