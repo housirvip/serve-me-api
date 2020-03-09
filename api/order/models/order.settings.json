@@ -33,6 +33,20 @@
         "Finished"
       ]
     },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Appliances",
+        "Electrical",
+        "Plumbing",
+        "HomeCleaning",
+        "Tutoring",
+        "PackagingAndMoving",
+        "ComputerRepair",
+        "HomeRepairAndPainting",
+        "PestControl"
+      ]
+    },
     "time": {
       "type": "datetime"
     },
