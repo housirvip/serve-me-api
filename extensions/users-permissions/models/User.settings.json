@@ -74,8 +74,8 @@
       "via": "user"
     },
     "addresses": {
-      "collection": "address",
-      "via": "user"
+      "via": "user",
+      "collection": "address"
     }
   }
 }
