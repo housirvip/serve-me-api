@@ -10,9 +10,9 @@
     "strapi": "strapi"
   },
   "devDependencies": {
-    "module-alias": "^2.2.2"
   },
   "dependencies": {
+    "module-alias": "^2.2.2",
     "firebase-admin": "^8.9.2",
     "knex": "<0.20.0",
     "mysql": "latest",
