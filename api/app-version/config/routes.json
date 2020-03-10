@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/app-versions",
+      "handler": "app-version.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/app-versions/count",
+      "handler": "app-version.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/app-versions/:id",
+      "handler": "app-version.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/app-versions",
+      "handler": "app-version.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/app-versions/:id",
+      "handler": "app-version.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/app-versions/:id",
+      "handler": "app-version.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/version",
+      "handler": "app-version.check",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
