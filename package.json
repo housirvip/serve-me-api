@@ -1,7 +1,7 @@
 {
   "name": "serve-me-api",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
@@ -30,7 +30,7 @@
     "@core": "./core"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "CSE 6324 Team 2"
   },
   "strapi": {
     "uuid": "e811dbe1-af5b-425a-a0f7-776d884fcbc0"
