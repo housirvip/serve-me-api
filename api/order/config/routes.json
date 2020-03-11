@@ -5,7 +5,9 @@
       "path": "/orders",
       "handler": "order.find",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/orders/count",
       "handler": "order.count",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/orders/:id",
       "handler": "order.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -30,7 +36,8 @@
       "handler": "order.create",
       "config": {
         "policies": [
-          "order-fields"
+          "write",
+          "create"
         ]
       }
     },
@@ -40,7 +47,7 @@
       "handler": "order.update",
       "config": {
         "policies": [
-          "order-fields"
+          "write"
         ]
       }
     },
@@ -50,7 +57,7 @@
       "handler": "order.delete",
       "config": {
         "policies": [
-          "order-fields"
+          "write"
         ]
       }
     },

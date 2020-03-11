@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "reviews",
+  "info": {
+    "name": "review"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "createTime",
+      "updateTime"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "imgUrls": {
+      "type": "json"
+    },
+    "order": {
+      "model": "order",
+      "via": "review"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "vendor": {
+      "model": "vendor"
+    }
+  }
+}

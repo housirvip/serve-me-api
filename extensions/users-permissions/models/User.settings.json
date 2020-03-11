@@ -67,7 +67,8 @@
       "type": "string"
     },
     "firebaseUid": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "vendor": {
       "model": "vendor",
