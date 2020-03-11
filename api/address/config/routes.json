@@ -5,7 +5,9 @@
       "path": "/addresses",
       "handler": "address.find",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/addresses/count",
       "handler": "address.count",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/addresses/:id",
       "handler": "address.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -30,7 +36,7 @@
       "handler": "address.create",
       "config": {
         "policies": [
-          "address-fields"
+          "write"
         ]
       }
     },
@@ -40,7 +46,7 @@
       "handler": "address.update",
       "config": {
         "policies": [
-          "address-fields"
+          "write"
         ]
       }
     },
@@ -50,7 +56,7 @@
       "handler": "address.delete",
       "config": {
         "policies": [
-          "address-fields"
+          "write"
         ]
       }
     }

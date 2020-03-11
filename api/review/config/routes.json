@@ -2,32 +2,38 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/tokens",
-      "handler": "token.find",
+      "path": "/reviews",
+      "handler": "review.find",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
       "method": "GET",
-      "path": "/tokens/count",
-      "handler": "token.count",
+      "path": "/reviews/count",
+      "handler": "review.count",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
       "method": "GET",
-      "path": "/tokens/:id",
-      "handler": "token.findOne",
+      "path": "/reviews/:id",
+      "handler": "review.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
       "method": "POST",
-      "path": "/tokens",
-      "handler": "token.create",
+      "path": "/reviews",
+      "handler": "review.create",
       "config": {
         "policies": [
           "write"
@@ -36,8 +42,8 @@
     },
     {
       "method": "PUT",
-      "path": "/tokens/:id",
-      "handler": "token.update",
+      "path": "/reviews/:id",
+      "handler": "review.update",
       "config": {
         "policies": [
           "write"
@@ -46,8 +52,8 @@
     },
     {
       "method": "DELETE",
-      "path": "/tokens/:id",
-      "handler": "token.delete",
+      "path": "/reviews/:id",
+      "handler": "review.delete",
       "config": {
         "policies": [
           "write"

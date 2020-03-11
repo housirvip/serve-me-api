@@ -5,7 +5,9 @@
       "path": "/bids",
       "handler": "bid.find",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/bids/count",
       "handler": "bid.count",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/bids/:id",
       "handler": "bid.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "read"
+        ]
       }
     },
     {
@@ -30,7 +36,7 @@
       "handler": "bid.create",
       "config": {
         "policies": [
-          "bid-fields"
+          "write"
         ]
       }
     },
@@ -40,7 +46,7 @@
       "handler": "bid.update",
       "config": {
         "policies": [
-          "bid-fields"
+          "write"
         ]
       }
     },
@@ -50,7 +56,7 @@
       "handler": "bid.delete",
       "config": {
         "policies": [
-          "bid-fields"
+          "write"
         ]
       }
     }
