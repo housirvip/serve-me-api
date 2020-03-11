@@ -8,6 +8,8 @@ module.exports = {
   Completed: 'Completed',
   Pending: 'Pending',
   Refunding: 'Refunding',
+  Refunded: 'Refunded',
   Closed: 'Closed',
+  Denied: 'Denied',
   Finished: 'Finished'
 };

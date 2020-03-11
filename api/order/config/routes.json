@@ -62,6 +62,54 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/order/select",
+      "handler": "order.select",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/deny",
+      "handler": "order.deny",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/close",
+      "handler": "order.close",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/refund",
+      "handler": "order.refund",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/refund-deny",
+      "handler": "order.refundDeny",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order/refund-agree",
+      "handler": "order.refundAgree",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/order/bid",
       "handler": "order.bid",
