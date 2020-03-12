@@ -31,10 +31,16 @@
     "zipCode": {
       "type": "integer"
     },
+    "lat": {
+      "type": "float"
+    },
+    "lng": {
+      "type": "float"
+    },
     "user": {
-      "via": "addresses",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "addresses"
     }
   }
 }
