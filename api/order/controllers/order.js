@@ -18,6 +18,8 @@ module.exports = {
       user: ctx.state.user.id
     });
 
+    ctx.app.emit('order-status', res);
+
     ctx.send(res);
   },
   deny: async ctx => {
@@ -29,6 +31,8 @@ module.exports = {
     }
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Denied});
+
+    ctx.app.emit('order-status', res);
 
     ctx.send(res);
   },
@@ -42,6 +46,8 @@ module.exports = {
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Closed});
 
+    ctx.app.emit('order-status', res);
+
     ctx.send(res);
   },
   refund: async ctx => {
@@ -53,6 +59,8 @@ module.exports = {
     }
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Refunding});
+
+    ctx.app.emit('order-status', res);
 
     ctx.send(res);
   },
@@ -66,6 +74,8 @@ module.exports = {
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Progressing});
 
+    ctx.app.emit('order-status', res);
+
     ctx.send(res);
   },
   refundAgree: async ctx => {
@@ -78,10 +88,21 @@ module.exports = {
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Refunded});
 
+    ctx.app.emit('order-status', res);
+
     ctx.send(res);
   },
   bid: async ctx => {
+    const order = await strapi.query('order').findOne({id: ctx.request.body.order.id});
+    if (!order) {
+      throw new Error(ErrorMessages.ORDER_NOT_FOUND)
+    } else if (order.status !== OrderStatus.Biding) {
+      throw new Error(ErrorMessages.ORDER_STATUS_FORBIDDEN)
+    }
+
     const res = await strapi.query('bid').create({...ctx.request.body, vendor: ctx.state.user.vendor.id});
+
+    ctx.app.emit('order-status', {...order, bid: res});
 
     ctx.send(res);
   },
@@ -101,6 +122,8 @@ module.exports = {
       status: OrderStatus.Accepting
     });
 
+    ctx.app.emit('order-status', res);
+
     ctx.send(res);
   },
   confirm: async ctx => {
@@ -112,6 +135,8 @@ module.exports = {
     }
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Pending});
+
+    ctx.app.emit('order-status', res);
 
     ctx.send(res);
   },
@@ -125,6 +150,8 @@ module.exports = {
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Progressing});
 
+    ctx.app.emit('order-status', res);
+
     ctx.send(res);
   },
   finish: async ctx => {
@@ -136,6 +163,8 @@ module.exports = {
     }
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Finished});
+
+    ctx.app.emit('order-status', res);
 
     ctx.send(res);
   },
@@ -155,6 +184,8 @@ module.exports = {
     });
 
     const res = await strapi.query('order').update({id: order.id}, {status: OrderStatus.Completed});
+
+    ctx.app.emit('order-status', res);
 
     ctx.send(res);
   },

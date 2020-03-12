@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "notifications",
+  "info": {
+    "name": "notification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "OrderStatus",
+        "Message"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Sending",
+        "Success",
+        "Failure",
+        "Draft"
+      ]
+    },
+    "details": {
+      "type": "json"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "vendor": {
+      "model": "vendor"
+    }
+  }
+}

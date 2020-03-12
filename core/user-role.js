@@ -3,5 +3,5 @@ module.exports = {
   Public: 'public',
   Authenticated: 'authenticated',
   Customer: 'customer',
-  Vendor: 'vendor'
+  Vendor: 'vendor',
 };

@@ -3,26 +3,14 @@
 const admin = require('firebase-admin');
 
 module.exports = {
-  getUid: (ctx) => {
+  getUid: (token) => {
     return new Promise((resolve, reject) => {
-      let token = '';
-
-      if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
-        const parts = ctx.request.header.authorization.split(' ');
-        if (parts.length === 2) {
-          const scheme = parts[0];
-          const credentials = parts[1];
-          if (/^Bearer$/i.test(scheme)) {
-            token = credentials;
-          }
-        } else {
-          throw new Error(
-            'Invalid authorization header format. Format is Authorization: Bearer [token]'
-          );
-        }
+      const parts = token.split(' ');
+      if (parts.length !== 2 || parts[0] !== 'Bearer') {
+        throw new Error('Invalid authorization header format. Format is Authorization: `Bearer ${token}`');
       }
 
-      admin.auth().verifyIdToken(token)
+      admin.auth().verifyIdToken(parts[1])
         .then(function (decodedToken) {
           resolve(decodedToken.uid);
         }).catch(function (error) {
