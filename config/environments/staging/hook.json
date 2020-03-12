@@ -1,0 +1,8 @@
+{
+  "order-status": {
+    "enabled": true
+  },
+  "fcm-notify": {
+    "enabled": true
+  }
+}

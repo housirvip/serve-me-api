@@ -11,7 +11,7 @@ module.exports = async (ctx, next) => {
     try {
       firebaseUid = await strapi.plugins[
         'users-permissions'
-        ].services.firebase.getUid(ctx);
+        ].services.firebase.getUid(ctx.request.header.authorization);
     } catch (e) {
       try {
         const token = await strapi.plugins[

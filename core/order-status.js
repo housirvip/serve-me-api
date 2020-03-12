@@ -11,5 +11,5 @@ module.exports = {
   Refunded: 'Refunded',
   Closed: 'Closed',
   Denied: 'Denied',
-  Finished: 'Finished'
+  Finished: 'Finished',
 };
