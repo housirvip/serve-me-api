@@ -23,9 +23,10 @@ module.exports = strapi => {
       strapi.app.on("fcm-notify", async notification => {
         notification.status = NotifyStatus.Sending;
         const ntf = await strapi.query("notification").create(notification);
-        let uid = ntf.vendor ? ntf.vendor.user.id : ntf.user.id;
+        let order = ntf.details;
+        let uid = ntf.vendor ? order.vendor.user : order.user.id;
         let tks = [];
-        const tkList = await strapi.query("token").find({user: uid, _sort: "id:desc", _limit: 5});
+        const tkList = await strapi.query("token").find({user: 1, _sort: "id:desc", _limit: 1});
         tkList.forEach((tk) => {
           if (tk.webToken) {
             tks.push(tk.webToken);
@@ -44,7 +45,6 @@ module.exports = strapi => {
         if (res.successCount) {
           await strapi.query("notification").update({id: ntf.id}, {status: NotifyStatus.Success});
         }
-        // console.log(res);
       });
     },
   };
