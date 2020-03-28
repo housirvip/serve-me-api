@@ -26,7 +26,7 @@ module.exports = strapi => {
         let order = ntf.details;
         let uid = ntf.vendor ? order.vendor.user : order.user.id;
         let tks = [];
-        const tkList = await strapi.query("token").find({user: 1, _sort: "id:desc", _limit: 1});
+        const tkList = await strapi.query("token").find({user: uid, _sort: "id:desc", _limit: 1});
         tkList.forEach((tk) => {
           if (tk.webToken) {
             tks.push(tk.webToken);
@@ -35,6 +35,9 @@ module.exports = strapi => {
             tks.push(tk.deviceToken);
           }
         });
+        if (tks.length === 0) {
+          return;
+        }
         const res = await admin.messaging().sendToDevice([...new Set(tks)],
           {
             notification: {
