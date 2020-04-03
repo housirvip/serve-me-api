@@ -6,6 +6,10 @@ module.exports = {
     // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
     args: 'start',
     instances: 1,
+    error_file: 'err.log',
+    out_file: 'out.log',
+    log_file: 'combined.log',
+    time: true,
     autorestart: true,
     watch: false,
     max_memory_restart: '1G',
