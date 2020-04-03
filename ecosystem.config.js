@@ -16,8 +16,8 @@ module.exports = {
     },
     env_production: {
       NODE_ENV: 'production',
-      GOOGLE_APPLICATION_CREDENTIALS: '/Users/housirvip/WebstormProjects/serve-me-api/config/environments/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
-      DB_URL: 'gce.housir.vip'
+      GOOGLE_APPLICATION_CREDENTIALS: '/home/housirvip/serve-me-api/config/environments/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
+      DB_URL: 'localhost'
     }
   }],
 
