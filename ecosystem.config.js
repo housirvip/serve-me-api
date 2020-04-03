@@ -15,12 +15,12 @@ module.exports = {
     max_memory_restart: '1G',
     env: {
       NODE_ENV: 'development',
-      GOOGLE_APPLICATION_CREDENTIALS: '/Users/housirvip/WebstormProjects/serve-me-api/config/environments/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
+      // GOOGLE_APPLICATION_CREDENTIALS: '/Users/housirvip/Documents/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
       DB_URL: 'gce.housir.vip'
     },
     env_production: {
       NODE_ENV: 'production',
-      GOOGLE_APPLICATION_CREDENTIALS: '/home/housirvip/serve-me-api/config/environments/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
+      // GOOGLE_APPLICATION_CREDENTIALS: '/Users/housirvip/Documents/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
       DB_URL: 'localhost'
     }
   }],
