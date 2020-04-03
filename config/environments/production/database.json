@@ -6,7 +6,7 @@
       "settings": {
         "client": "mysql",
         "database": "serve-me",
-        "host": "localhost",
+        "host": "${process.env.DB_URL}",
         "username": "root",
         "password": "housirvip"
       },
