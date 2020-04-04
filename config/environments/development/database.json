@@ -5,10 +5,10 @@
       "connector": "bookshelf",
       "settings": {
         "client": "mysql",
-        "database": "serve-me-dev",
+        "database": "${process.env.DB_NAME}",
         "host": "${process.env.DB_URL}",
-        "username": "root",
-        "password": "housirvip"
+        "username": "${process.env.DB_USER}",
+        "password": "${process.env.DB_PASSWORD}"
       },
       "options": {
         "debug": false

@@ -2,7 +2,6 @@ module.exports = {
   apps : [{
     name: 'strapi',
     script: 'npm',
-
     // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
     args: 'start',
     instances: 1,
@@ -16,19 +15,24 @@ module.exports = {
     env: {
       NODE_ENV: 'development',
       GOOGLE_APPLICATION_CREDENTIALS: '/Users/housirvip/Documents/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
-      DB_URL: 'gce.housir.vip'
+      DB_NAME: 'serve-me-dev',
+      DB_URL: 'localhost',
+      DB_USER: 'root',
+      DB_PASSWORD: 'housirvip'
     },
     env_production: {
       NODE_ENV: 'production',
       GOOGLE_APPLICATION_CREDENTIALS: '/home/housirvip/serve-me-api/serve-me-ionic-firebase-adminsdk-44oms-33c98c32b3.json',
-      DB_URL: 'localhost'
+      DB_NAME: 'serve-me',
+      DB_URL: 'localhost',
+      DB_USER: 'root',
+      DB_PASSWORD: 'housirvip'
     }
   }],
-
   deploy : {
     production : {
-      user : 'housirvip',
-      host : 'gce.housir.vip',
+      user : 'user',
+      host : 'host',
       ref  : 'origin/master',
       repo : 'git@github.com:housirvip/serve-me-api.git',
       path : '/var/www/production',
