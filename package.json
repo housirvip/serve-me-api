@@ -1,7 +1,7 @@
 {
   "name": "serve-me-api",
   "private": true,
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Serve Me Backend Api",
   "scripts": {
     "develop": "strapi develop",
@@ -31,7 +31,7 @@
     "@core": "./core"
   },
   "author": {
-    "name": "CSE 6324 Team 2"
+    "name": "housirvip"
   },
   "strapi": {
     "uuid": "e811dbe1-af5b-425a-a0f7-776d884fcbc0"
