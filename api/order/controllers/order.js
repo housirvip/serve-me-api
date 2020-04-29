@@ -189,4 +189,14 @@ module.exports = {
 
     ctx.send(res);
   },
+  incomes: async ctx => {
+    const orders = await strapi.query('order').find({vendor: ctx.state.user.vendor.id, status: OrderStatus.Completed});
+
+    let res = 0;
+    orders.forEach(order => {
+      res += order.price;
+    });
+
+    ctx.send({res});
+  }
 };

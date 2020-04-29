@@ -156,6 +156,13 @@
       "config": {
         "policies": []
       }
+    },{
+      "method": "GET",
+      "path": "/order/incomes",
+      "handler": "order.incomes",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

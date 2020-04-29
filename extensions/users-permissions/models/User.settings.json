@@ -63,6 +63,9 @@
     "points": {
       "type": "integer"
     },
+    "wallet": {
+      "type": "decimal"
+    },
     "photoUrl": {
       "type": "string"
     },
@@ -75,8 +78,8 @@
       "via": "user"
     },
     "addresses": {
-      "via": "user",
-      "collection": "address"
+      "collection": "address",
+      "via": "user"
     }
   }
 }

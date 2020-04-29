@@ -38,9 +38,9 @@
       "type": "float"
     },
     "user": {
+      "via": "addresses",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "addresses"
+      "model": "user"
     }
   }
 }

@@ -9,22 +9,21 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "module-alias": "^2.2.2",
     "firebase-admin": "^8.9.2",
     "knex": "<0.20.0",
     "mysql": "latest",
-    "strapi": "3.0.0-beta.19.5",
-    "strapi-admin": "3.0.0-beta.19.5",
-    "strapi-connector-bookshelf": "3.0.0-beta.19.5",
-    "strapi-plugin-content-manager": "3.0.0-beta.19.5",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.19.5",
-    "strapi-plugin-email": "3.0.0-beta.19.5",
-    "strapi-plugin-upload": "3.0.0-beta.19.5",
-    "strapi-plugin-users-permissions": "3.0.0-beta.19.5",
-    "strapi-utils": "3.0.0-beta.19.5"
+    "strapi": "3.0.0-beta.20.1",
+    "strapi-admin": "3.0.0-beta.20.1",
+    "strapi-connector-bookshelf": "3.0.0-beta.20.1",
+    "strapi-plugin-content-manager": "3.0.0-beta.20.1",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.20.1",
+    "strapi-plugin-email": "3.0.0-beta.20.1",
+    "strapi-plugin-upload": "3.0.0-beta.20.1",
+    "strapi-plugin-users-permissions": "3.0.0-beta.20.1",
+    "strapi-utils": "3.0.0-beta.20.1"
   },
   "_moduleAliases": {
     "@root": ".",
