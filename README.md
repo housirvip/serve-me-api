@@ -1,4 +1,4 @@
-# serve-me-java
+# serve-me-api
 
 > Build with [Strapi](https://strapi.io/)
 
